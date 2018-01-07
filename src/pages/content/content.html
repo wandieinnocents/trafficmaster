@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar color="secondary">
+    <ion-title>
+      Where are you going?
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+
+  <ion-item>
+    <ion-label floating>Destination</ion-label>
+    <ion-input type="text" ([ngModel])="Destination"></ion-input>
+  </ion-item>
+
+  <!-- <ion-item>
+    <ion-label floating>Password</ion-label>
+    <ion-input type="password"></ion-input>
+  </ion-item> -->
+
+</ion-list>
+<button ion-button full (click)="calculateAndDisplayRoute()">Get Directions	</button>
+<div id="map"></div>
+
+
+
+  <ion-footer class="fixed">
+<ion-navbar color="secondary">
+<ion-title >Locate  Destination </ion-title>
+</ion-navbar>
+
+</ion-footer>
+  <ion-fab right bottom>
+    <button ion-fab color="danger"><ion-icon name="arrow-dropleft"></ion-icon></button>
+    <ion-fab-list side="top">
+      <button ion-fab color="secondary"> <ion-icon name="logo-facebook"></ion-icon></button>
+      <button ion-fab color="secondary"><ion-icon name="logo-twitter"></ion-icon></button>
+      <button ion-fab color="secondary"><ion-icon name="logo-vimeo"></ion-icon></button>
+      <button ion-fab color="secondary"><ion-icon name="logo-googleplus"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>

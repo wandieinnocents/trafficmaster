@@ -1,0 +1,71 @@
+{
+  "BACK_BUTTON_TEXT": "Back",
+
+  "NAME": "Name",
+  "EMAIL": "Email",
+  "USERNAME": "Username",
+  "PASSWORD": "Password",
+  "LOGIN": "Sign in",
+  "SIGNUP": "Sign up",
+
+  "TAB1_TITLE": "Home",
+  "TAB2_TITLE": "Updates",
+  "TAB3_TITLE": "Settings",
+  "TAB4_TITLE": "Trips",
+  "TAB5_TITLE": "Talk",
+  "TAB6_TITLE": "Contact",
+
+  "MAP_TITLE": "Map",
+
+  "TUTORIAL_SKIP_BUTTON": "Skip",
+  "TUTORIAL_CONTINUE_BUTTON": "Continue",
+
+  "TUTORIAL_SLIDE1_TITLE": "Traffic Application ",
+  "TUTORIAL_SLIDE1_DESCRIPTION": "Stream live traffic updates",
+
+  "TUTORIAL_SLIDE2_TITLE": "Google Maps",
+  "TUTORIAL_SLIDE2_DESCRIPTION": "Navigate Using Google Maps",
+
+  "TUTORIAL_SLIDE3_TITLE": "Notifications",
+  "TUTORIAL_SLIDE3_DESCRIPTION": "Recieve Taffic Notifications",
+
+  "TUTORIAL_SLIDE4_TITLE": "WELCOME",
+
+  "WELCOME_INTRO": "Welcome to traffic Application",
+
+  "SETTINGS_TITLE": "Settings",
+  "SETTINGS_OPTION1": "Location",
+  "SETTINGS_OPTION2": "Alerts",
+  "SETTINGS_OPTION3": "Notifications",
+  "SETTINGS_OPTION4": "Username",
+
+  "SETTINGS_PROFILE_BUTTON": "Edit Profile",
+
+  "SETTINGS_PAGE_PROFILE": "Edit Profile",
+
+  "WELCOME_TITLE": "Welcome",
+
+  "LOGIN_TITLE": "Sign in",
+  "LOGIN_ERROR": "Unable to sign in. Please check your account information and try again.",
+  "LOGIN_BUTTON": "Sign in",
+  "SIGNUP_TITLE": "Sign up",
+  "SIGNUP_ERROR": "Unable to create account. Please check your account information and try again.",
+  "SIGNUP_BUTTON": "Sign up",
+
+  "LIST_MASTER_TITLE": "Traffic Updates",
+
+  "ITEM_CREATE_TITLE": "New Incident",
+  "ITEM_CREATE_CHOOSE_IMAGE": "Add Image",
+
+  "ITEM_NAME_PLACEHOLDER": "Name",
+  "ITEM_ABOUT_PLACEHOLDER": "About",
+
+  "DONE_BUTTON": "Done",
+  "CANCEL_BUTTON": "Cancel",
+  "DELETE_BUTTON": "Delete",
+
+  "CARDS_TITLE": "Social",
+
+  "SEARCH_TITLE": "Search",
+  "SEARCH_PLACEHOLDER": "Search the items list, e.g. \"Donald Duck\""
+}

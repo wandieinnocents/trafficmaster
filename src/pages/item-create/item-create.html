@@ -1,0 +1,61 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ 'ITEM_CREATE_TITLE' | translate }}</ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="cancel()">
+        <span color="primary" showWhen="ios">
+          {{ 'CANCEL_BUTTON' | translate }}
+        </span>
+        <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-buttons end>
+      <button ion-button (click)="done()" [disabled]="!isReadyToSave" strong>
+        <span color="primary" showWhen="ios">
+          {{ 'DONE_BUTTON' | translate }}
+        </span>
+        <ion-icon name="md-checkmark" showWhen="core,android,windows"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <form *ngIf="form" [formGroup]="form" (ngSubmit)="createItem()">
+   
+    <ion-list>
+      <ion-item>
+        <ion-input type="text" placeholder="Road" formControlName="road"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Traffic status</ion-label>
+        <ion-select formControlName="population">
+          <ion-option value="too_much">Too much</ion-option>
+          <ion-option value="clear">Clear</ion-option>
+          <ion-option value="bearable">Bearable</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Direction of traffic</ion-label>
+        <ion-select formControlName="direction">
+          <ion-option value="going" >Going</ion-option>
+          <ion-option value="coming" >Coming</ion-option>
+          <ion-option value="both"> Both</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-input type="text" placeholder="Traffic starting from" formControlName="from"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Description</ion-label>
+        <ion-textarea formControlName="description"></ion-textarea>
+      </ion-item>
+    </ion-list>
+  </form>
+</ion-content>

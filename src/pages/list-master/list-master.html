@@ -1,0 +1,50 @@
+<ion-header>
+
+  <ion-navbar color="secondary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{ 'LIST_MASTER_TITLE' | translate }}</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="addItem()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item-sliding *ngFor="let item of currentItems">
+      <button ion-item (click)="openItem(item)">
+        <ion-avatar item-start>
+          <img *ngIf="item.profilePic"  [src]="item.profilePic" />
+          <img *ngIf="!item.profilePic"  src="assets/img/user.png" />
+        </ion-avatar>
+        <h2>{{item.road}}  </h2>
+        <button ion-button item-right *ngIf="item.population == 'too_much'" color="danger" clear>Heavy</button>
+        <button ion-button item-right *ngIf="item.population == 'clear'" color="secondary" clear >Clear</button>
+        <button ion-button item-right *ngIf="item.population == 'bearable'" color="twitter" clear >Bearable</button>
+        <p>From: {{ item.from }} Direction: {{ item.direction }}</p>
+        <ion-note item-end *ngIf="item.note">{{item.note}}</ion-note>
+      </button>
+
+      <ion-item-options>
+        <button ion-button color="danger" (click)="deleteItem(item)">
+          {{ 'DELETE_BUTTON' | translate }}
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+  <ion-fab right bottom>
+    <button ion-fab color="danger"><ion-icon name="share"></ion-icon></button>
+    <ion-fab-list side="top">
+      <button ion-fab color="secondary"> <ion-icon name="logo-facebook"></ion-icon></button>
+      <button ion-fab color="secondary"><ion-icon name="logo-twitter"></ion-icon></button>
+      <button ion-fab color="secondary"><ion-icon name="logo-googleplus"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>
