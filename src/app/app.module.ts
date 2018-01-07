@@ -70,7 +70,8 @@ export function provideSettings(storage: Storage) {
   declarations: [
     MyApp,
     LoginPage,
-    StartpagePage
+    StartpagePage,
+    SignupPage
   ],
   imports: [
     BrowserModule,
@@ -92,7 +93,8 @@ export function provideSettings(storage: Storage) {
   entryComponents: [
     MyApp,
     LoginPage,
-    StartpagePage
+    StartpagePage,
+    SignupPage
 
 
   ],
