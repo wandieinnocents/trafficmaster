@@ -20,6 +20,7 @@ import { TripsPage } from '../pages/trips/trips';
 import { Push, PushObject, PushOptions} from '@ionic-native/push';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { LoginPage } from '../pages/login/login';
+import { TabsPage } from '../pages/tabs/tabs';
 
 
 
@@ -57,7 +58,8 @@ import { LoginPage } from '../pages/login/login';
 })
 export class MyApp {
 
-  rootPage = FirstRunPage;
+  // rootPage = FirstRunPage;
+  rootPage = TabsPage;
 
   // rootPage = StartpagePage;
 
@@ -77,12 +79,14 @@ export class MyApp {
 
   constructor(
     private translate: TranslateService,
-     platform: Platform,
+    platform: Platform,
     settings: Settings,
     private afAuth: AngularFireAuth,
-    private config: Config, private statusBar: StatusBar,
+    private config: Config,
+    private statusBar: StatusBar,
     private splashScreen: SplashScreen,
-    public alertCtrl:AlertController, public push: Push
+    public alertCtrl:AlertController,
+    public push: Push
 
     ) {
     //auth implementation
@@ -90,7 +94,7 @@ export class MyApp {
       if(!auth)
         this.rootPage = LoginPage;
       else
-        this.rootPage = StartpagePage;
+        this.rootPage = TabsPage;
     });
 
 

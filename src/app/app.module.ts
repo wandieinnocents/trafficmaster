@@ -18,6 +18,8 @@ import { StartpagePage } from '../pages/startpage/startpage';
 import { ContactPage } from '../pages/contact/contact';
 import { FeedbackPage } from '../pages/feedback/feedback';
 import { SignupPage } from '../pages/signup/signup';
+import { TabsPage } from '../pages/tabs/tabs';
+
 import { LoginPage } from '../pages/login/login';
 import { TripsPage } from '../pages/trips/trips';
 import { Push} from '@ionic-native/push';
@@ -70,9 +72,21 @@ export function provideSettings(storage: Storage) {
   declarations: [
     MyApp,
     LoginPage,
-    StartpagePage,
+    FeedbackPage,
+    TabsPage,
+
+
     SignupPage
   ],
+
+  exports: [
+      // FeedbackPage,
+      TabsPage
+
+
+        ],
+
+
   imports: [
     BrowserModule,
     HttpClientModule,
@@ -93,7 +107,8 @@ export function provideSettings(storage: Storage) {
   entryComponents: [
     MyApp,
     LoginPage,
-    StartpagePage,
+    TabsPage,
+    FeedbackPage,
     SignupPage
 
 
@@ -105,8 +120,9 @@ export function provideSettings(storage: Storage) {
     Camera,
     SplashScreen,
     // StartpagePage,
+    // TabsPage,
     ContactPage,
-    FeedbackPage,
+    // FeedbackPage,
     TripsPage,
     StatusBar,
     Push,
